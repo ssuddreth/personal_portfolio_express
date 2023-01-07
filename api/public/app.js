@@ -54,6 +54,7 @@ filter_btns.forEach(btn =>
     event.preventDefault();
     let mail = new FormData(form);
     sendMail(mail);
+    setTimeout(form.reset(), 2000);
     success.style.display = 'block';
   });
   
