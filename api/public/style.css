@@ -822,6 +822,14 @@ nav .container {
     margin-top: .6rem;
 }
 
+.success{
+  font-size: 20px;
+  color: green;
+  position: absolute;
+  animation: buttons .3s linear;
+  display: none;
+}
+
 /*End Contact*/
 
 /*Hire me*/

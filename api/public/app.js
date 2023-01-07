@@ -4,6 +4,8 @@ const skills_wrap = document.querySelector(".skills");
 const skills_bars = document.querySelectorAll(".skill-progress");
 const records_wrap = document.querySelector(".records");
 const records_numbers = document.querySelectorAll(".number");
+const form = document.getElementById("contact-me-form");
+const success = document.getElementById('success');
 
 
 filter_btns.forEach(btn => 
@@ -48,15 +50,22 @@ filter_btns.forEach(btn =>
     });
   }
 
-  function resetFormTwo() {
-    var frm = document.getElementsByName('contact-me-form')[0];
-    frm.reset();
-    return false;
-  }
-
-  function resetForm() {
-    setTimeout(resetFormTwo, 2000);
- }
+  const formEvent = form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    let mail = new FormData(form);
+    sendMail(mail);
+    setTimeout(form.reset(), 2000);
+    success.style.display = 'block';
+  });
+  
+  const sendMail = (mail) => {
+    fetch("/send", {
+      method: "post",
+      body: mail,
+    }).then((response) => {
+      return response.json();
+    });
+  };
 
   var mySwiper = new Swiper(".swiper-container", {
       speed: 1100, 

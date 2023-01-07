@@ -56,7 +56,7 @@
                         <p class="text">
                             Hi, I'm Steven, a full-stack web-developer.
                         </p>
-                        <a href="#" class="btn">Download CV</a>
+                        <a href="./TEST.pdf" download="CV" class="btn">Download CV</a>
                     </div>
 
                     <div class="column-2 image">
@@ -309,7 +309,7 @@
                                     <i class="fas fa-paper-plane"></i>
                                 </div>
                                 <a href="mailto:ssuddreth@gmail.com">
-                                    <p class="info-text">ssuddreth@gmail.com</p>
+                                    <p class="info-text">ssuddreth@outlook.com</p>
                                 </a>
                             </div>
                             <div class="information">
@@ -325,20 +325,22 @@
                         <h3 class="title">Contact Me</h3>
                         <form name="contact-me-form" id="contact-me-form" action="send" method="POST" enctype="multipart/form-data">
                             <div class="row">
-                                <input name="first-name" id="first-name" type="text" class="contact-input"
+                                <input name="first" id="first" type="text" class="contact-input"
                                     placeholder="First Name" required>
-                                <input name="last-name" id="last-name" type="text" class="contact-input"
+                                <input name="last" id="last" type="text" class="contact-input"
                                     placeholder="Last Name" required>
                             </div>
                             <div class="row">
-                                <input name="phone" id="phone" type="text" class="contact-input" placeholder="Phone" required>
+                                <input name="phone" id="phone" type="text" class="contact-input" placeholder="Phone">
                                 <input name="email" id="email" type="email" class="contact-input" placeholder="Email" required>
                             </div>
                             <div class="row">
                                 <textarea name="message" class="contact-input textarea"
                                     placeholder="Message" required></textarea>
                             </div>
-                            <input type="submit" name="submit" value="Send" style="border: none;" class="btn" onclick="resetForm()"></input>
+                            <input type="submit" name="submit" value="Send" style="border: none;" class="btn"></input>
+                            <br>
+                            <div class="success" id="success">Thank you for your message!</div>
                         </form>
                     </div>
                 </div>
@@ -402,7 +404,7 @@
                     <h3 class="title-sm">Contact Me</h3>
                     <div class="footer-input-wrap">
                         <a href="mailto:ssuddreth@gmail.com">
-                            <p class="info-text">ssuddreth@gmail.com</p>
+                            <p class="info-text">ssuddreth@outlook.com</p>
                         </a>
                     </div>
                 </div>
